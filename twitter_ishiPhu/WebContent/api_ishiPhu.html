@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>API Twitter IshiPhu</title>
+
+<link rel="stylesheet" type="text/css" href="css/api_css.css" />
+</head>
+<body>
+	<h1>Specifications Twitter IshiPhu (PROJET LI328)</h1>
+
+	<div class = "sommaire">
+	<div class = "som">SOMMAIRE</div>
+	
+		
+		<span class = "titre">
+		<a href = "#authentification"><h2>Authentification Services</h2></a>
+			<li><a href = "#enregistrement">Enregistrement d'un nouvel utilisateur</a></li><br />
+			<li><a href = "#cxn"> Connexion</a></li><br />
+			<li><a href = "#dcxn"> Deconnexion</a></li><br />
+			
+		</span>
+		
+			
+		<span class = "titre">
+		<a href = "#followService"><h2>Follow Services</h2></a>
+			<li><a href = "#follow">Follow a user</a></li><br />
+			<li><a href = "#unfollow">Unfollow a user</a></li><br />
+			<br/>
+		</span>
+			
+		<span class = "titre">
+		<a href = "#friendService"><h2>Friend Services</h2></a>
+			<li><a href = "#addFriend">Add a new Friend</a></li><br />
+			<li><a href = "#deleteFriend">Delete a Friend</a></li><br />
+			<li><a href = "#searchFriend">Find a Friend</a></li><br />
+		</span>
+			
+		
+		<span class = "titre">
+		
+		<a href = "#tweetService"><h2>Tweet Services</h2></a>
+			<li><a href = "#tweet">Tweet a message</a></li><br />
+			<li><a href = "#retweet">ReTweet a message</a></li><br />
+			<li><a href = "#favori">Add a tweet to the favorites</a></li><br />	
+		</span>
+		
+		
+		<span class = "titre">
+		<a href = "#adminService"><h2>Administrateur Services</h2></a>
+			<li><a href = "#adminDeleteExpiredSession">Delete an expired session (Admin Service)</a></li><br />
+			<br/>
+			<br/>
+		</span>
+	</div>
+	
+	<div class = "contents">
+		<div class="service">
+			<h2 id = "authentification">Authentification</h2>
+			<div class = "descriptif">
+				<h3 id = "enregistrement">Enregistrement d'un nouvel utilisateur:	</h3>
+					<h4>twitter_ishiPhu/createUser</h4>
+						<h5>descriptif:</h5>Enregistrer un nouvel utilisateur<br />
+						<h5>Parametres en entree:</h5>String userName, String password<br />
+						<h5>Format de sortie:</h5>JSON<br />
+						<h5>Exemple de sortie:</h5><div class = "consola">{}</div><br />
+						<h5>Erreurs possibles:</h5>
+							<li>One of the parameter is null => error_code = 1</li><br />
+							<li> The userName specified already exist => error_code = 10</li><br />
+							<li>The password is not in a valide format => error_code = 15</li><br />
+				
+						<h5>Avancement du Service:</h5>OK<br />
+						<h5>Classes Java en rapport avec le Web Service:</h5> <br />
+						<h5>Informations additionnelles:</h5> <br />
+			</div>
+			<div class = "descriptif">
+				<h3 id = "cxn">Login:	</h3>
+					<h4>twitter_ishiPhu/login</h4>
+						<h5>descriptif:</h5> Connexion d'un utilisateur<br />
+						<h5>Parametres en entree:</h5> String pseudo<br />
+						<h5>Format de sortie:</h5>JSON<br />
+						<h5>Exemple de sortie:</h5><div class = "consola">{}</div><br />
+						<h5>Erreurs possibles:</h5>
+							<p>
+							<li>One of the parameter is null => error_code = 1</li><br />
+							<li>The userName specified doesn't exist in the database => error_code = 11</li><br />
+							<li>The password doesn't match with the specified userName => error_code = 16</li><br />
+							</p>
+						<h5>Avancement du Service:</h5>OK<br />
+						<h5>Classes Java en rapport avec le Web Service:</h5> <br />
+						<h5>Informations additionnelles:</h5> <br />
+			</div>
+			
+			<div class = "descriptif">
+				<h3 id = "dcxn">Logout:</h3>
+					<h4>twitter_ishiPhu/logout</h4>
+						<h5>descriptif:</h5>Deconnexion d'un utilisateur<br />
+						<h5>Parametres en entree: </h5>String userName, String password<br />
+						<h5>Format de sortie: </h5>JSON<br />
+						<h5>Exemple de sortie:</h5><div class = "consola">{}</div><br />
+						<h5>Erreurs possibles:</h5>
+							<p>
+							<li>One of the parameter is null => error_code = 1</li><br />
+							<li>The userName specified doesn't exist in the database => error_code = 11</li><br />
+							<li>The session_key linked to the userName specified is expired => error_code = 21</li>
+								</p>
+						<h5>Avancement du Service:</h5>OK<br />
+						<h5>Classes Java en rapport avec le Web Service:</h5> <br />
+						<h5>Informations additionnelles:</h5> <br />
+			</div>
+		</div>
+		
+		<div class = "service">
+		<h2 id = "followService">Follow Services</h2>
+			<div class = "descriptif">
+				<h3 id = "follow">Follow a user:</h3>
+					<h4>twitter_ishiPhu/follow</h4>
+						<h5>descriptif:</h5>Follow a user<br />
+						<h5>Parametres en entree: </h5>String sessionKey, String followDestID<br />
+						<h5>Format de sortie: </h5>JSON<br />
+						<h5>Exemple de sortie:</h5>
+						<div class = "consola">
+						{
+							{"username", user},
+							{"session_key", key},
+							{"followDestination", followDest},
+							{"follow","success!"}
+							}
+							</div>
+						<br />
+						<h5>Erreurs possibles:</h5>
+							<p>
+							<li>One of the parameter is null => error_code = 1</li><br />
+							<li>The userName specified doesn't exist in the database => error_code = 11</li><br />
+							<li>The session_key linked to the userName specified is expired => error_code = 21</li>
+								</p>
+						<h5>Avancement du Service:</h5> OK<br />
+					<h5>Classes Java en rapport avec le Web Service:</h5> <br />
+					<h5>Informations additionnelles:</h5> <br />
+			</div>
+			
+			<div class = "descriptif">
+				<h3 id = "unfollow">UnFollow a user:</h3>
+					<h4>twitter_ishiPhu/unfollow</h4>
+						<h5>descriptif:</h5>unFollow a user<br />
+						<h5>Parametres en entree: </h5>String sessionKey, String followDestID<br />
+						<h5>Format de sortie: </h5>JSON<br />
+						<h5>Exemple de sortie:</h5>
+						<div class = "consola">
+						{
+							{"username", user},
+							{"session_key", key},
+							{"has followed", followDest},
+							{"delete follower","success!"}
+							}
+						</div>
+						<br />
+						<h5>Erreurs possibles:</h5>
+							<p>
+							<li>One of the parameter is null => error_code = 1</li><br />
+							<li>The userName specified doesn't exist in the database => error_code = 11</li><br />
+							<li>The session_key linked to the userName specified is expired => error_code = 21</li>
+								</p>
+						<h5>Avancement du Service:</h5> OK<br />
+						<h5>Classes Java en rapport avec le Web Service:</h5> <br />
+						<h5>Informations additionnelles:</h5> <br />
+			</div>
+		</div>
+		
+		<div class = "service">
+			<h2 id = "friendService">Friend Services</h2>
+			<div class = "descriptif">
+				<h3 id = "addFriend">Add a new Friend:</h3>
+					<h4>twitter_ishiPhu/addFriend</h4>
+						<h5>descriptif:</h5>Add a new Friend existing in the database<br />
+						<h5>Parametres en entree: </h5>String userName, String idFriend<br />
+						<h5>Format de sortie: </h5>JSON<br />
+						<h5>Exemple de sortie:</h5><div class = "consola">{}</div><br />
+						<h5>Erreurs possibles:</h5>
+							<p>
+							<li>One of the parameter is null => error_code = 1</li><br />
+							<li>The userName specified doesn't exist in the database => error_code = 11</li><br />
+							<li>The idFriend specified doesn't exist in the database => error_code = 12</li><br />
+							<li>The session_key linked to the userName specified is expired => error_code = 21</li>
+								</p>
+						<h5>Avancement du Service:</h5>OK<br />
+						<h5>Classes Java en rapport avec le Web Service:</h5> <br />
+						<h5>Informations additionnelles:</h5> <br />
+			</div>	
+			
+			<div class = "descriptif">
+				<h3 id = "deleteFriend">Remove a Friend:</h3>
+					<h4>twitter_ishiPhu/deleteFriend</h4>
+						<h5>descriptif:</h5>Remove a Friend existing in the database<br />
+						<h5>Parametres en entree: </h5>String userName, String idFriend<br />
+						<h5>Format de sortie: </h5>JSON<br />
+						<h5>Exemple de sortie:</h5><div class = "consola">{}</div><br />
+						<h5>Erreurs possibles:</h5>
+							<p>
+							<li>One of the parameter is null => error_code = 1</li><br />
+							<li>The userName specified doesn't exist in the database => error_code = 11</li><br />
+							<li>The idFriend specified doesn't exist in the database => error_code = 12</li><br />
+							<li>The session_key linked to the userName specified is expired => error_code = 21</li>
+								</p>
+						<h5>Avancement du Service:</h5>OK<br />
+						<h5>Classes Java en rapport avec le Web Service:</h5> <br />
+						<h5>Informations additionnelles:</h5> <br />		
+			</div>
+			
+			<div class = "descriptif">
+				<h3 id = "searchFriend">Find a Friend:</h3>
+					<h4>twitter_ishiPhu/search</h4>
+						<h5>descriptif:</h5>Remove a Friend existing in the database<br />
+						<h5>Parametres en entree: </h5>String userName, String idFriend<br />
+						<h5>Format de sortie: </h5>JSON<br />
+						<h5>Exemple de sortie:</h5><div class = "consola">{}</div><br />
+						<h5>Erreurs possibles:</h5>
+							<p>
+							<li>One of the parameter is null => error_code = 1</li><br />
+							<li>The userName specified doesn't exist in the database => error_code = 11</li><br />
+							<li>The idFriend specified doesn't exist in the database => error_code = 12</li><br />
+							<li>The session_key linked to the userName specified is expired => error_code = 21</li>
+								</p>
+						<h5>Avancement du Service:</h5> TO DO<br />
+						<h5>Classes Java en rapport avec le Web Service:</h5> <br />
+						<h5>Informations additionnelles:</h5> <br />	
+			</div>
+		</div>
+		
+		<div class = "service">
+			<h2 id = "tweetService">Tweet Services</h2>
+			<div class = "descriptif">
+				<h3 id = "tweet">Tweet a message:</h3>
+					<h4>twitter_ishiPhu/tweet</h4>
+						<h5>descriptif:</h5>Tweet a message<br />
+						<h5>Parametres en entree: </h5>String sessionKey, String tweet<br />
+						<h5>Format de sortie: </h5>JSON<br />
+						<h5>Exemple de sortie:</h5>
+						<div class = "consola">
+						{
+							{"username", user},
+							{"tweet", tweet_txt},
+							{"postTweet","success!"}
+						<br />
+							}
+						</div>
+						<br />
+						<h5>Erreurs possibles:</h5>
+							<p>
+							<li>One of the parameter is null => error_code = 1</li><br />
+							<li>The userName specified doesn't exist in the database => error_code = 11</li><br />
+							<li>The session_key linked to the userName specified is expired => error_code = 21</li>
+								</p>
+						<h5>Avancement du Service:</h5> OK<br />
+						<h5>Classes Java en rapport avec le Web Service:</h5> <br />
+						<h5>Informations additionnelles:</h5> <br />
+			</div>
+						
+			<div class = "descriptif">
+				<h3 id = "retweet">ReTweet a message:</h3>
+					<h4>twitter_ishiPhu/retweet</h4>
+						<h5>descriptif:</h5>reTweet an existing tweet from another user<br />
+						<h5>Parametres en entree: </h5>String sessionKey, String srcID, String tweet<br />
+						<h5>Format de sortie: </h5>JSON<br />
+						<h5>Exemple de sortie:</h5>
+						<div class = "consola">
+						{
+							{"author_login", srcID},
+							{"reTweeted_username", user},
+							{"reTweet","success!"}
+						<br />
+							}
+						</div>
+						<br />
+						<h5>Erreurs possibles:</h5>
+							<p>
+							<li>One of the parameter is null => error_code = 1</li><br />
+							<li>The userName specified doesn't exist in the database => error_code = 11</li><br />
+							<li>The session_key linked to the userName specified is expired => error_code = 21</li>
+								</p>
+						<h5>Avancement du Service:</h5>OK<br />
+						<h5>Classes Java en rapport avec le Web Service:</h5> <br />
+						<h5>Informations additionnelles:</h5> <br />
+			</div>	
+			<div class = "descriptif">
+				<h3 id = "favori">Add a tweet to the favorites:</h3>
+					<h4>twitter_ishiPhu/addFavorites</h4>
+						<h5>descriptif:</h5>add a tweet to the favorites<br />
+						<h5>Parametres en entree: </h5>String sessionKey, String tweet_id<br />
+						<h5>Format de sortie: </h5>JSON<br />
+						<h5>Exemple de sortie:</h5>
+						<div class = "consola">
+						{
+							{"username", user},
+							{"tweet_id", tweet_id},
+							{"tweet_txt", tweet_txt},
+							{"add to the favorites", "success!"}
+							}
+						</div>
+						<br />
+						<h5>Erreurs possibles:</h5>
+							<p>
+							<li>One of the parameter is null => error_code = 1</li><br />
+							<li>The userName specified doesn't exist in the database => error_code = 11</li><br />
+							<li>The session_key linked to the userName specified is expired => error_code = 21</li>
+								</p>
+						<h5>Avancement du Service:</h5> TO TEST<br />
+						<h5>Classes Java en rapport avec le Web Service:</h5> <br />
+						<h5>Informations additionnelles:</h5> <br />
+			</div>
+		</div>	
+		<div class = "service">	
+			<h2 id = "adminService">Administrateur Services</h2>
+			<div class = "descriptif">
+				<h3 id = "adminDeleteExpiredSession">Delete an expired session (Admin Service)</h3>
+					<h4>twitter_ishiPhu/adminDeleteExpiredSession</h4>
+						<h5>descriptif:</h5>Remove an expired session in the database by an admin action<br />
+						<h5>Parametres en entree: </h5>String adminID, String userID<br />
+						<h5>Format de sortie: </h5>JSON<br />
+						<h5>Exemple de sortie:</h5>
+						<div class = "consola">
+						{	{"adminID":adminID},
+							{"userID" :userID},
+							{"Deleted expired session", "success!"}
+						}
+						</div>
+						<br />
+						<h5>Erreurs possibles:</h5>
+							<p>
+							<li>One of the parameter is null => error_code = 1</li><br />
+							<li>The userName specified doesn't exist in the database => error_code = 11</li><br />
+							<li>The session_key linked to the userName specified isn't expired => error_code = 105</li>
+								</p>
+						<h5>Avancement du Service:</h5> OK<br />
+						<h5>Classes Java en rapport avec le Web Service:</h5> <br />
+						<h5>Informations additionnelles:</h5> <br />	
+			</div>
+		</div>
+	</div>	
+
+</body>
+</html>

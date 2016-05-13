@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app> 
+	<display-name>twishiPhu</display-name> 
+	<welcome-file-list>
+		<welcome-file>welcome2.html</welcome-file>
+	</welcome-file-list>
+	<servlet> 
+		<servlet-name>CreateUser</servlet-name> 
+		<servlet-class>services.servlets.CreateUserServlet</servlet-class> 
+	</servlet>
+	<servlet-mapping> 
+		<servlet-name>CreateUser</servlet-name> 
+		<url-pattern>/createUser</url-pattern> 
+	</servlet-mapping> 
+	 
+	<servlet> 
+		<servlet-name>ConnectedFriends</servlet-name> 
+		<servlet-class>services.servlets.ConnectedFriendsServlet</servlet-class> 
+	</servlet>
+	<servlet-mapping> 
+		<servlet-name>ConnectedFriends</servlet-name> 
+		<url-pattern>/connectedFriends</url-pattern> 
+	</servlet-mapping> 
+	
+	<servlet> 
+		<servlet-name>AddFriend</servlet-name> 
+		<servlet-class>services.servlets.AddFriendServlet</servlet-class> 
+	</servlet> 
+	<servlet-mapping> 
+		<servlet-name>AddFriend</servlet-name> 
+		<url-pattern>/addFriend</url-pattern> 
+	</servlet-mapping> 
+	
+	<servlet> 
+		<servlet-name>DeleteFriend</servlet-name> 
+		<servlet-class>services.servlets.DeleteFriendServlet</servlet-class> 
+	</servlet>  
+	<servlet-mapping> 
+		<servlet-name>DeleteFriend</servlet-name> 
+		<url-pattern>/deleteFriend</url-pattern> 
+	</servlet-mapping>  
+	
+	<servlet> 
+		<servlet-name>DeleteAllTweet</servlet-name> 
+		<servlet-class>services.servlets.DeleteAllTweetServlet</servlet-class> 
+	</servlet>  
+	<servlet-mapping> 
+		<servlet-name>DeleteAllTweet</servlet-name> 
+		<url-pattern>/deleteAllTweet</url-pattern> 
+	</servlet-mapping>  
+	
+	<servlet> 
+		<servlet-name>DisplayImage</servlet-name> 
+		<servlet-class>services.servlets.DisplayImageServlet</servlet-class> 
+	</servlet>  
+	<servlet-mapping> 
+		<servlet-name>DisplayImage</servlet-name> 
+		<url-pattern>/displayImage</url-pattern> 
+	</servlet-mapping>  
+	
+	<servlet> 
+		<servlet-name>Login</servlet-name> 
+		<servlet-class>services.servlets.LoginServlet</servlet-class> 
+	</servlet> 
+	<servlet-mapping> 
+		<servlet-name>Login</servlet-name> 
+		<url-pattern>/login</url-pattern> 
+	</servlet-mapping> 
+	 
+	<servlet> 
+		<servlet-name>Logout</servlet-name> 
+		<servlet-class>services.servlets.LogoutServlet</servlet-class> 
+	</servlet>  
+	 <servlet-mapping> 
+		<servlet-name>Logout</servlet-name> 
+		<url-pattern>/logout</url-pattern> 
+	</servlet-mapping>   
+	
+	<servlet> 
+		<servlet-name>Inbox</servlet-name> 
+		<servlet-class>services.servlets.PostInboxServlet</servlet-class> 
+	</servlet>  
+	 <servlet-mapping> 
+		<servlet-name>Inbox</servlet-name> 
+		<url-pattern>/inbox</url-pattern> 
+	</servlet-mapping>
+	  
+	<servlet> 
+		<servlet-name>OwnTweet</servlet-name> 
+		<servlet-class>services.servlets.OwnTweetServlet</servlet-class> 
+	</servlet>  
+	 <servlet-mapping> 
+		<servlet-name>OwnTweet</servlet-name> 
+		<url-pattern>/ownTweet</url-pattern> 
+	</servlet-mapping>
+		
+	<servlet> 
+		<servlet-name>Tweet</servlet-name> 
+		<servlet-class>services.servlets.TweetServlet</servlet-class> 
+	</servlet>  
+	 <servlet-mapping> 
+		<servlet-name>Tweet</servlet-name> 
+		<url-pattern>/tweet</url-pattern> 
+	</servlet-mapping> 
+	
+	<servlet> 
+		<servlet-name>ReTweet</servlet-name> 
+		<servlet-class>services.servlets.RetweetServlet</servlet-class> 
+	</servlet>  
+	 <servlet-mapping> 
+		<servlet-name>ReTweet</servlet-name> 
+		<url-pattern>/retweet</url-pattern> 
+	</servlet-mapping> 
+		
+	<servlet> 
+		<servlet-name>Favori</servlet-name> 
+		<servlet-class>services.servlets.FavoriServlet</servlet-class> 
+	</servlet>  
+	 <servlet-mapping> 
+		<servlet-name>Favori</servlet-name> 
+		<url-pattern>/addFavorites</url-pattern> 
+	</servlet-mapping> 
+	
+	<servlet> 
+		<servlet-name>Follow</servlet-name> 
+		<servlet-class>services.servlets.FollowServlet</servlet-class> 
+	</servlet>  
+	 <servlet-mapping> 
+		<servlet-name>Follow</servlet-name> 
+		<url-pattern>/follow</url-pattern> 
+	</servlet-mapping> 
+		
+	<servlet> 
+		<servlet-name>UnFollow</servlet-name> 
+		<servlet-class>services.servlets.UnFollowServlet</servlet-class> 
+	</servlet>  
+	 <servlet-mapping> 
+		<servlet-name>UnFollow</servlet-name> 
+		<url-pattern>/unfollow</url-pattern> 
+	</servlet-mapping> 
+	
+	<servlet> 
+		<servlet-name>PostImage</servlet-name> 
+		<servlet-class>services.servlets.PostImageServlet</servlet-class> 
+	</servlet>  
+	 <servlet-mapping> 
+		<servlet-name>PostImage</servlet-name> 
+		<url-pattern>/postImage</url-pattern> 
+	</servlet-mapping> 	
+	
+	<servlet> 
+		<servlet-name>Search</servlet-name> 
+		<servlet-class>services.servlets.SearchServlet</servlet-class> 
+	</servlet>  
+	 <servlet-mapping> 
+		<servlet-name>Search</servlet-name> 
+		<url-pattern>/search</url-pattern> 
+	</servlet-mapping> 	
+	
+	<servlet> 
+		<servlet-name>AdminDeleteExpiredSession</servlet-name> 
+		<servlet-class>services.servlets.AdminDeleteExpiredSessionServlet</servlet-class> 
+	</servlet>  
+	 <servlet-mapping> 
+		<servlet-name>AdminDeleteExpiredSession</servlet-name> 
+		<url-pattern>/adminDeleteExpiredSession</url-pattern> 
+	</servlet-mapping> 
+	
+	<servlet> 
+		<servlet-name>AdminDeleteUserProfile</servlet-name> 
+		<servlet-class>services.servlets.AdminDeleteUserProfileServlet</servlet-class> 
+	</servlet>  
+	 <servlet-mapping> 
+		<servlet-name>AdminDeleteUserProfile</servlet-name> 
+		<url-pattern>/adminDeleteUserProfile</url-pattern> 
+	</servlet-mapping> 
+</web-app>
