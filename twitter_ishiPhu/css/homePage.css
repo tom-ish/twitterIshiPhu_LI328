@@ -1,0 +1,111 @@
+/*Twitter blue color => #46c0fb*/
+#headerBlock {
+	width: 100%;
+	height: 10%;
+	background-color: #008b8b;
+	background: gray;
+}
+#searchZone {
+	background-color: #008b8b;
+	height: 7%;
+}
+#search_zone > input[type = "text"] {
+	position : fixed;
+	width: 100%;
+	margin-top:20px;
+	background-position: top;
+	position: relative;
+	margin-left: 40%;
+	top: 2%;
+	width: 17%;
+	height: 25px;
+	font-size: 17px;
+}
+#log_zone {
+	padding-left: 30%;
+}
+#headerBlankZone {
+	background-color: red;	
+}
+@font-face {
+    font-family: "twitter-font";
+    src: url('twitter_font/pico-black.ttf');
+}
+#header_msg {
+	  text-align: center;
+	  vertical-align: middle;
+}
+/*
+#logo {
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	width: 400px;
+	font-size: 30px;
+	text-shadow: 2px 2px 4px white;
+}*/
+body{
+	color: #fff1e1;
+	background-color: #79dfdd;
+	width: 100%;
+	height: 100%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+#corps {
+	position:relative;
+	background-color: #b4db97;
+	color: #26495b;
+	width: 100%;
+	font-size: 50px;
+	border-top: teal;
+	border-top-style: groove;
+	border-top-color: #81171d;
+}
+#enregistrement_form {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	float: right;
+	margin-right: 10%;
+	margin-top: 40px;
+	width: 25%;
+	font-size: 20px;
+	background-color: #f0d99a;
+	border: medium;
+	border-style: groove;
+	border-color: #81171d;
+	border-radius: 10px;
+	line-height: 200%;
+}
+#welcome_txt {
+	position: absolute;
+	color: #575049;
+	margin-top: 6%;
+	margin-left: 6%;
+	margin-right: 6%;
+	padding-right: 10px;
+	width: 50%;
+	float: inherit;
+	font-size: 30px;
+	text-indent: 2%;
+}
+#enregistrement_form .pn, #enregistrement_form .ids, #enregistrement_form > h2, #enregistrement_form #signUpButton {
+	margin-left: 10%;
+}
+#enregistrement_form .pn input[type = "text"], #enregistrement_form .ids input[type = "text"], #enregistrement_form .ids input[type = "password"] {
+	width: 50%;
+	min-width: 90px;
+	display: block;
+	margin-right: 15%;
+}
+#enregistrement_form #signUpButton {
+	width: 50%;
+	height: 10%;
+	font-size: 17px;
+	margin-left: 40%;
+	margin-right: 40%;
+	margin-bottom: 20px;
+}
+
+overflow:hidden /* Permet de bloquer le scroll*/
+

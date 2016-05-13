@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>tt</title>
+<style type="text/css">
+body {
+	background-color: white;
+}
+</style>
+
+<link rel="stylesheet" type="text/css" href="css/diapoTest.css">
+</style>
+
+<script type="text/javascript" src="script/diapoTest.js"></script>
+
+<script type="text/javascript">
+
+function mur_instance( tb,repertoire, tps ){
+   
+    var ob=Object.create(k_mur);
+
+    ob.nombre=3;
+    ob.nb_hauteur=2;
+    ob.angle_max=Math.PI/2.5;
+    ob.marge=2;
+    ob.ctn=document.getElementById("ctn2");
+    ob.chemin="img/";
+    ob.tbmage=['muse-the2ndlaw.jpg','sea-wallpaper.jpg','sea-wallpaper2.jpg','twitter_background.jpg'];
+
+    ob.init_image();
+}
+
+
+window.addEventListener('load',mur_instance, false);
+
+</script>
+
+</head>
+<body>
+
+	
+	<div class="container" id='ctn2'></div>
+
+</body>
+</html>

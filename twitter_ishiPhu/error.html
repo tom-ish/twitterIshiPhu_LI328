@@ -1,0 +1,20 @@
+<html><head><title>Apache Tomcat/7.0.56 (Debian) - Rapport d''erreur</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>Etat HTTP 500 - org.apache.tomcat.util.http.fileupload.FileUploadBase$InvalidContentTypeException: the request doesn't contain a multipart/form-data or multipart/mixed stream, content type header is application/x-www-form-urlencoded; charset=UTF-8</h1><HR size="1" noshade="noshade"><p><b>type</b> Rapport d''exception</p><p><b>message</b> <u>org.apache.tomcat.util.http.fileupload.FileUploadBase$InvalidContentTypeException: the request doesn't contain a multipart/form-data or multipart/mixed stream, content type header is application/x-www-form-urlencoded; charset=UTF-8</u></p><p><b>description</b> <u>Le serveur a rencontré une erreur interne qui l''a empêché de satisfaire la requête.</u></p><p><b>exception</b> <pre>javax.servlet.ServletException: org.apache.tomcat.util.http.fileupload.FileUploadBase$InvalidContentTypeException: the request doesn't contain a multipart/form-data or multipart/mixed stream, content type header is application/x-www-form-urlencoded; charset=UTF-8
+	org.apache.catalina.connector.Request.parseParts(Request.java:2801)
+	org.apache.catalina.connector.Request.getParts(Request.java:2655)
+	org.apache.catalina.connector.Request.getPart(Request.java:2825)
+	org.apache.catalina.connector.RequestFacade.getPart(RequestFacade.java:1081)
+	services.servlets.CreateUserServlet.doPost(CreateUserServlet.java:44)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:646)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+</pre></p><p><b>cause mère</b> <pre>org.apache.tomcat.util.http.fileupload.FileUploadBase$InvalidContentTypeException: the request doesn't contain a multipart/form-data or multipart/mixed stream, content type header is application/x-www-form-urlencoded; charset=UTF-8
+	org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl.&lt;init&gt;(FileUploadBase.java:804)
+	org.apache.tomcat.util.http.fileupload.FileUploadBase.getItemIterator(FileUploadBase.java:259)
+	org.apache.tomcat.util.http.fileupload.FileUploadBase.parseRequest(FileUploadBase.java:283)
+	org.apache.catalina.connector.Request.parseParts(Request.java:2737)
+	org.apache.catalina.connector.Request.getParts(Request.java:2655)
+	org.apache.catalina.connector.Request.getPart(Request.java:2825)
+	org.apache.catalina.connector.RequestFacade.getPart(RequestFacade.java:1081)
+	services.servlets.CreateUserServlet.doPost(CreateUserServlet.java:44)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:646)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+</pre></p><p><b>note</b> <u>La trace complète de la cause mère de cette erreur est disponible dans les fichiers journaux de Apache Tomcat/7.0.56 (Debian).</u></p><HR size="1" noshade="noshade"><h3>Apache Tomcat/7.0.56 (Debian)</h3></body></html>

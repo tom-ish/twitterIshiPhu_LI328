@@ -1,0 +1,96 @@
+body{
+	width: 100%;
+	font-family: "Trebuchet MS",Verdana, Impact,sans-serif;
+}
+overflow:hidden
+h1, h2{
+	font-family: "Trebuchet MS",Verdana,sans-serif;
+	font-variant: small-caps;
+	color: #070681;
+	margin: 5% 50%;
+}
+h1, h2, h3 {
+	text-align: center;
+}
+#authentification, #followService, #friendService, #tweetService, #adminService{
+}
+.som{
+	margin: 0.5%;
+	text-align: center;
+	font-size: 20px;
+	color: wite;
+}
+.sommaire{
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 10px;
+	width: 95%;
+	vertical-align: middle;
+	background-color: #46c0fb;
+	border: medium;
+	border-style: groove;
+	border-color: #793143;
+	border-radius: 10px;
+	background-image: url("../img/beach_firework.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.consola{
+	padding: 8px;
+	background-color: #464646;
+	color: #b6b6b6;
+	font-family: "Lucida Console", "Lucida Grande","Courier New";
+	border-radius: 5px;
+	border: thin;
+	border-style: dashed;
+	border-color: #f2f2f2;
+}
+.titre{
+	position: relative;
+	margin: 4% 4%;
+	padding: 10px 10px;;
+	width: 25%;
+	height: 10%;
+	display: table-cell;
+	vertical-align: top;
+	background-color: #f5fffb;
+	border: medium;
+	border-style: groove;
+	border-color: #793143;
+	border-radius: 10px;
+}
+.service{
+	position: relative;
+	width: 95%;
+	padding: 10px;
+	margin-top: 1%;
+	margin-left: 10px;
+	margin-right: 10px;
+	display: inline-block;
+	vertical-align: top;
+	background-color: #46c0fb;
+	border: medium;
+	border-style: groove;
+	border-color: #793143;
+	border-radius: 10px;
+	background-color: #e8f5ef;
+	background-image: url("../img/shibuya.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.descriptif{
+	padding: 0.7% 0.5%;
+	margin-bottom: 10px;
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+	background-color: #f5fffb;
+	border: medium;
+	border-style: groove;
+	border-color: #793143;
+	border-radius: 10px;
+	font
+}
+p{
+	text-indent: 30px;
+}
